@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SPA</title>
 </head>
 <body>
-    
     <nav>
         <a href="/" onclick="route()">Home</a>
         <a href="/about" onclick="route()">Sobre</a>
@@ -17,44 +16,7 @@
 
     <div id="app"></div>
 
-    <script>
-
-        const routes = {
-            "/": "/pages/home.html",
-            "/about": "/pages/about.html",
-            "/contact": "/pages/contact.html",
-            404: "/pages/404.html"
-        }
-
-        function route(event) {
-            event = event || window.event
-            event.preventDefault() // nao redireciona ao clicar nos links
-
-            window.history.pushState({}, "", event.target.href)  // adiciona o href do target que disparou o evento no histórico
-
-            handle()
-        }
-
-        function handle() {
-            const pathname = window.location.pathname // pathname é o /contact, /about, etc
-        //  const { pathname } = window.location  -> outra maneira de pegar o pathname (desestruturando)
-        
-            const route = routes[pathname] || routes[404]
-            console.log('antes do fetch')
-
-            fetch(route)
-                .then(data => data.text())
-                .then(html => {
-                    document.querySelector("#app").innerHTML = html
-                })
-
-            console.log(route)
-        }
-
-        handle()
-        window.onpopstate = () => handle()
-
-    </script>
+    <script src="js/index.js" type="module"></script>
 
 </body>
 </html>
