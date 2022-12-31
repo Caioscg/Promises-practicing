@@ -1,0 +1,23 @@
+{
+  "name": "projeto-17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caioscg/Promises-practicing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caioscg/Promises-practicing/issues"
+  },
+  "homepage": "https://github.com/Caioscg/Promises-practicing#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
